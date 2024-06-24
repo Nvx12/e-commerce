@@ -1,0 +1,68 @@
+version: '3.7'
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: backend
+    restart: unless-stopped
+    command: npm run dev
+    env_file:
+      - ./backend/.env
+    ports:
+      - 5500:5500
+    networks:
+      - tun_prod
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: frontend
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    networks:
+      - tun_prod
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        
+  mongodb:
+    image: mongo
+    restart: unless-stopped
+    volumes:
+      - ./mongoDB_data:/data
+    ports:
+      - "27017:27017"
+    networks:
+      - tun_prod
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+  mongogui:
+    image: mongo-express
+    restart: unless-stopped
+    ports:
+      - 8081:8081
+    networks:
+      - tun_prod
+    environment:
+       - ME_CONFIG_MONGODB_URL=mongodb://mongodb:27017
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+networks:
+  tun_prod:
+    external: true
