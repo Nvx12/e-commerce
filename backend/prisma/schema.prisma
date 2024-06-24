@@ -8,25 +8,14 @@ generator client {
 }
 
 model Product {
-    id       String @id @default(auto()) @map("_id") @db.ObjectId
-    slug     String @unique
-    title    String
-    body     String
-    author   User   @relation(fields: [authorId], references: [id])
-    authorId String @db.ObjectId
+    id    String @id @default(auto()) @map("_id") @db.ObjectId
+    title String
+    body  String
 }
 
 model User {
-    id      String    @id @default(auto()) @map("_id") @db.ObjectId
-    email   String    @unique
-    name    String?
-    address Address?
-    posts   Product[]
-}
-
-type Address {
-    street String
-    city   String
-    state  String
-    zip    String
+    id       String  @id @default(auto()) @map("_id") @db.ObjectId
+    email    String  @unique
+    password String
+    name     String?
 }

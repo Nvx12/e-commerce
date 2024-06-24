@@ -1,0 +1,121 @@
+2024-06-24T13:37:32.621Z [e-commerce] info: Server running on port 5500
+2024-06-24T13:38:26.209Z [e-commerce] info: Server running on port 5500
+2024-06-24T13:56:38.633Z [e-commerce] info: Server running on port 5500
+2024-06-24T13:57:05.629Z [e-commerce] info: Server running on port 5500
+2024-06-24T13:58:32.307Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:01:34.117Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:01:57.406Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:03:16.226Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:04:55.944Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:04:57.425Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:05:00.493Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:05:10.993Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:05:58.218Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:06:37.681Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:07:01.234Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:07:42.832Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:07:50.379Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:07:53.477Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:08:25.393Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:08:33.185Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:09:44.633Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:11:11.453Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:14:33.571Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:18:12.096Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:18:21.231Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:18:50.919Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:19:12.819Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:22:21.997Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:22:46.290Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:23:06.476Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:23:29.870Z [e-commerce] info: Server running on port 5500
+2024-06-24T14:23:33.751Z [e-commerce] error: User creation failed: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    email: "test@test.com",
+    password: "$2b$10$ITYIG8AysOszCLSu2epcIOmcD1E4uF4QXrmqMclMn1iKw/G4UHGZW",
+    ~~~~~~~~
+?   id?: String,
+?   name?: String | Null,
+?   address?: AddressNullableCreateEnvelopeInput | AddressCreateInput | Null
+  }
+}
+
+Unknown argument `password`. Available options are marked with ?.
+2024-06-24T14:24:42.356Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:10:03.770Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:11:33.024Z [e-commerce] error: Failed to retrieve user 
+Invalid `prisma.user.findUnique()` invocation:
+
+{
+  where: {
+    id: 66798
+        ~~~~~
+  }
+}
+
+Argument `id`: Invalid value provided. Expected String, provided Int.
+2024-06-24T15:11:54.642Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:11:55.589Z [e-commerce] error: Failed to retrieve user 
+Invalid `prisma.user.findUnique()` invocation:
+
+{
+  where: {
+    _id: 66798,
+    ~~~
+?   id?: String,
+?   email?: String,
+?   AND?: UserWhereInput | UserWhereInput[],
+?   OR?: UserWhereInput[],
+?   NOT?: UserWhereInput | UserWhereInput[],
+?   password?: StringFilter | String,
+?   name?: StringNullableFilter | String | Null
+  }
+}
+
+Unknown argument `_id`. Did you mean `id`? Available options are marked with ?.
+2024-06-24T15:12:12.656Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:12:25.830Z [e-commerce] error: Failed to retrieve user 
+Invalid `prisma.user.findUnique()` invocation:
+
+{
+  where: {
++   id: String
+  }
+}
+
+Argument `id` is missing.
+2024-06-24T15:12:39.250Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:12:59.885Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:13:00.848Z [e-commerce] error: Failed to retrieve user 
+Invalid `prisma.user.findUnique()` invocation:
+
+{
+  where: {
+    id: 66798
+        ~~~~~
+  }
+}
+
+Argument `id`: Invalid value provided. Expected String, provided Int.
+2024-06-24T15:13:58.085Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:14:23.675Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:14:27.059Z [e-commerce] error: Failed to retrieve user 
+Invalid `prisma.user.findUnique()` invocation:
+
+{
+  where: {
+    id: 66798
+        ~~~~~
+  }
+}
+
+Argument `id`: Invalid value provided. Expected String, provided Int.
+2024-06-24T15:14:39.101Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:14:50.848Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:15:27.240Z [e-commerce] info: Server running on port 5500
+2024-06-24T15:16:02.719Z [e-commerce] info: GET /
+2024-06-24T15:16:02.892Z [e-commerce] info: GET /favicon.ico
+2024-06-24T15:17:59.016Z [e-commerce] info: Server running on port 5500

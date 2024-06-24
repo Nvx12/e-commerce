@@ -11,7 +11,7 @@ const createProduct = async (product) => {
         });
         return createdProduct;
     } catch (error) {
-        console.error('Failed to create product:', error);
+        logger.error('Failed to create product:', error);
         throw error;
     }
 };
@@ -23,7 +23,7 @@ const getProductById = async (id) => {
         });
         return product;
     } catch (error) {
-        console.error('Failed to get product:', error);
+        logger.error('Failed to get product:', error);
         throw error;
     }
 };
@@ -33,7 +33,7 @@ const getAllProducts = async () => {
         const products = await prisma.product.findMany();
         return products;
     } catch (error) {
-        console.error('Failed to get products:', error);
+        logger.error('Failed to get products:', error);
         throw error;
     }
 };
@@ -47,7 +47,7 @@ const updateProduct = async (id, productUpdates) => {
         });
         return updatedProduct;
     } catch (error) {
-        console.error('Failed to update product:', error);
+        logger.error('Failed to update product:', error);
         throw error;
     }
 };
@@ -60,7 +60,7 @@ const deleteProduct = async (id) => {
         });
         return deletedProduct;
     } catch (error) {
-        console.error('Failed to delete product:', error);
+        logger.error('Failed to delete product:', error);
         throw error;
     }
 };
